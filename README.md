@@ -19,8 +19,8 @@
         * Contact Us link
         * Cart/Checkout link (popover/collapsible is extra)
     
-### Requirements
-* Must use a MySQL database hosted in AWS RDS, and use stored procedures
+### Requirements (CHECK)
+<!--* Must use a MySQL database hosted in AWS RDS, and use stored procedures
     * Should have tables for Categories, Products, Purchases, and PurchasesProducts
     * Categories
         * id int AI
@@ -39,18 +39,18 @@
     * PurchasesProducts
         * productid int FK for Product id, cascade update, cascade on delete
         * purchaseid int FK for Purchase id, cascade update, cascade on delete
-* Must use Express and NodeJS, hosted in AWS Elastic Beanstalk
-* Must use prerender.io
+* Must use Express and NodeJS, hosted in AWS Elastic Beanstalk-->
+<!--* Must use prerender.io
 * Must use Stripe for card processing
 * Must use Sendgrid or Mailgun for email sending
 * Must be responsive (look good on mobile and desktop)
     * Bootstrap's Grid System will be very helpful
-    * You can find standalone grid systems if you don't want to use Bootstrap
+    * You can find standalone grid systems if you don't want to use Bootstrap-->
 
 ### Images
 * You will be given product images
-    * You can save these into a folder named images in your client folder
-    * For a file called waterbottle.png in the images folder, the product in the database should have an imageurl value of '/images/waterbottle.png'
+    <!--* You can save these into a folder named images in your client folder-->
+    <!--* For a file called waterbottle.png in the images folder, the product in the database should have an imageurl value of '/images/waterbottle.png'-->
 * You can use mustache in the src of an image tag to bind to the imageurl of the product
     * You may want to use a background-image instead
 

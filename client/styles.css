@@ -1,0 +1,7 @@
+@font-face {
+    font-family: my-font;
+    src: url(/fonts/BranddonGrotesque-Black.otf);
+}
+* {
+    font-family: my-font;
+}

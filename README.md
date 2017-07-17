@@ -19,7 +19,7 @@
         * Contact Us link
         * Cart/Checkout link (popover/collapsible is extra)
     
-### Requirements
+### Requirements (CHECK)
 <!--* Must use a MySQL database hosted in AWS RDS, and use stored procedures
     * Should have tables for Categories, Products, Purchases, and PurchasesProducts
     * Categories
@@ -40,12 +40,12 @@
         * productid int FK for Product id, cascade update, cascade on delete
         * purchaseid int FK for Purchase id, cascade update, cascade on delete
 * Must use Express and NodeJS, hosted in AWS Elastic Beanstalk-->
-* Must use prerender.io
+<!--* Must use prerender.io
 * Must use Stripe for card processing
 * Must use Sendgrid or Mailgun for email sending
 * Must be responsive (look good on mobile and desktop)
     * Bootstrap's Grid System will be very helpful
-    * You can find standalone grid systems if you don't want to use Bootstrap
+    * You can find standalone grid systems if you don't want to use Bootstrap-->
 
 ### Images
 * You will be given product images

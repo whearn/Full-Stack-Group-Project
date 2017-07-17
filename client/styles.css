@@ -5,6 +5,21 @@
 * {
     font-family: my-font;
 }
+<<<<<<< HEAD
 #contact {
     background-image: url(images/covalence-store-misc-hero.jpg);
+=======
+
+.brand {
+    max-height: 10px;
+    max-width: 10%; 
+    overflow: visible;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.brand-footer {
+    background-color: lightgrey;
+    color: grey;
+>>>>>>> 1daa664e132ccbb4a90ade77606d4766e1b6c57b
 }

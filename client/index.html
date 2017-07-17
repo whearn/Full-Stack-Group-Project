@@ -34,24 +34,41 @@
 
         <div class="container">
             <!--HEADER HERE-->
+        <nav class="navbar navbar-fixed-top navbar-inverse">
+            <div class="container">
+                    <div class="container-fluid">
+                        <a class="brand" href="#">
+                            <img class="col-3-sm" src="/images/Newlogo.png">
+                        </a>
+                        <a class="navbar-btn col-" role="button" href="/apparel">Apparel</a>
+                        <a class="navbar-btn" role="button" href="/misc">Misc</a>
+                        <a class="navbar-btn navbar-right" role="button" href="/checkout">Cart</a>
+                    </div>
+            </div>
+        </nav>
+
         <div ng-view></div>
             <!--FOOTER-->
+
+        <nav class="navbar navbar-fixed-bottom brand-footer">
+            <div class="container">
+                <img class="col-3-sm" src="/images/Newlogo.png">
+            </div>
+        </nav>
+
+
         </div>
 
 
-
-
-        <!--pull in script for all FE files below!!!-->
 
         
         <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.4/angular.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.4/angular-route.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.4/angular-resource.js"></script>
-        <!--<script src="app.js"></script>
+        <script src="app.js"></script>
         <script src="controllers.js"></script>
         <script src="factories.js"></script>
         <script src="services.js"></script>
-        <script src="directives.js"></script>-->
         <script src="https://js.stripe.com/v3/"></script>
         <!--<script type="text/javascript">
             var stripe = Stripe('pk_test_8zOqfrTl6yuy3YJdDh3I80fV');

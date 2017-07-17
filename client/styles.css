@@ -7,6 +7,10 @@
     font-family: my-font;
 }
 
+#contact {
+    background-image: url(images/covalence-store-misc-hero.jpg);
+}
+
 .brand {
     max-height: 10px;
     max-width: 10%; 

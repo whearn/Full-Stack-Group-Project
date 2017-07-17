@@ -1,7 +1,8 @@
 @font-face {
     font-family: my-font;
-    src: url(fonts/BranddonGrotesque-Black.otf);
+    src: url(./fonts/BranddonGrotesque-Black.otf);
 }
+
 * {
     font-family: my-font;
 }
@@ -17,4 +18,9 @@
 .brand-footer {
     background-color: lightgrey;
     color: grey;
+}
+
+.copyright {
+    font-family: my-font;
+    float: right;
 }

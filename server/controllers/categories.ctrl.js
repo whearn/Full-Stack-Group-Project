@@ -16,3 +16,5 @@ router.route('/')
     });
 
 module.exports = router;
+
+//make front end ng-controller for ng-scope navbar instead of 

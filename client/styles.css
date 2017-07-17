@@ -1,7 +1,10 @@
 @font-face {
     font-family: my-font;
-    src: url(/fonts/BranddonGrotesque-Black.otf);
+    src: url(fonts/BranddonGrotesque-Black.otf);
 }
 * {
     font-family: my-font;
+}
+#contact {
+    background-image: url(images/covalence-store-misc-hero.jpg);
 }

@@ -1,9 +1,28 @@
-<div class="text-center">
-    <h1>Contact Us</h1>
-    <form ng-submit="contact()">
-        <input ng-model="name" placeholder="Name">
-        <input type="email" ng-model="email" placeholder="Email">
-        <input ng-model="message" placeholder="Message">
-        <button ng-click="signup()">Sign Up</button>
-    </form>
+<div class="jumbotron" id="contact">
 </div>
+<div class="header">
+    <h1></h1>
+</div>
+<form class="my-form" ng-submit="save()">
+    <div class="form-group">
+        <input class="form-control" type="text" ng-model="post.title" placeholder="Email Address">
+    </div>
+
+    <div class="form-group">
+    <select class="form-control" ng-model="post.categoryid">
+        <option value="">Select Category</option>
+        <option ng-repeat="c in categories" value="{{ c.id }}">{{ c.name }}</option>
+    </select>
+    </div>
+    <div class="form-group">
+    <select class="form-control" ng-model="post.userid">
+        <option value="">Select User</option>
+        <option ng-repeat="u in users" value="{{ u.id }}">{{ u.firstname }} {{ u.lastname }}</option>
+    </select>
+    </div>
+    <div class="form-group">
+    <textarea class="form-control" ng-model="post.content"></textarea>
+    </div>
+    <input class="btn btn-success" type="submit" value="Save">
+</form>
+>>>>>>> 104dea818650f7a8690066e27d15276543126c9e

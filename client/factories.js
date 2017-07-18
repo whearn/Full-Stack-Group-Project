@@ -1,6 +1,6 @@
 angular.module('storeApp.factories', [])
 .factory('Product', ['$resource', function($resource) {
-    return $resource('/api/products/:id', {id: '@id'}, {
+    return $resource('/api/product/:id', {id: '@id'}, {
     });
 }])
 .factory('Apparel', ['$resource', function($resource) {

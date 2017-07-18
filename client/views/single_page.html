@@ -1,0 +1,11 @@
+<div class="container">
+
+<div>
+    <img src="{{ product.imageURL }}" alt="">
+    <h1>{{ product.title }}</h1>
+    <p>{{ product.description }}</p>
+    <p>{{ product.price | currency }}</p>
+</div>
+   <button ng-click="addItem()" class="btn btn-info btn-md"><span id="btn-text"><i class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></i>Add To Cart</span></button>
+
+</div>

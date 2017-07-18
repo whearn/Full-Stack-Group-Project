@@ -39,6 +39,14 @@ nav {
     float: right;
 }
 
+.product-hero {
+    width: 100%;
+}
+
+.product-thumbnail {
+    width: 250px;
+}
+
 /* WELCOME WELCOME WELCOME WELCOME WELCOME */
 .welcome {
     

@@ -2,19 +2,34 @@
     font-family: my-font;
     src: url(fonts/BrandonGrotesque-Black.otf);
 }
-
 * {
     font-family: my-font;
+    box-sizing: border-box;
 }
 
+a:active, a:visited, a:link {
+    text-decoration: none;
+    color: rgb(67, 182, 200);
+}
+ a:hover {
+    color: white;
+} 
 /* INDEX INDEX INDEX INDEX INDEX INDEX  */
+
 nav {
-    opacity: 0.89%;
+    opacity: 0.9;
     width: 100%;
     padding: 0.5em;
     /* width: 71.45em;  */
     /* margin-left: -10.5em; */
-
+}
+.nav-options:hover {
+    border-bottom: 3px solid white;
+}
+.row::after {
+    content: "";
+    clear: both;
+    display: block;
 }
 .brand {
     max-height: 10px;
@@ -28,13 +43,32 @@ nav {
     width: auto;
     margin-top: 1em;
     margin-bottom: 1em;
+    margin-left: 1em;
+}
+.col-1 { width: 1em; }
+.col-2 { width: 1em; }
+.col-3 { width: 1em; }
+.col-4 { width: 1em; }
+.col-5 { width: 1em; }
+.col-6 { width: 1em; }
+.col-7 { width: 1em; }
+
+[class*="col-"] {
+    float: left;
+}
+
+#first {
+    border-right: 3px solid rgb(67, 182, 200);
+}
+p {
+    margin-top: 0.9em;
+    font-size: 1.25em;
 }
 
 .brand-footer {
     background-color: lightgrey;
     color: grey;
 }
-
 .copyright {
     float: right;
 }
@@ -47,12 +81,10 @@ nav {
     background-size: cover;
     position: relative;
 }
-
 .welcome img {
     width: 100%;
     height: auto;
 }
-
 .hello-text {
     float: left;
     position: absolute;
@@ -61,7 +93,9 @@ nav {
     transform: translate(-50%, -50%);
     color: white;
 }
-
+#shop-btn:focus {
+    outline: 0;
+}
 /* APPAREL APPAREL APPAREL APPAREL APPAREL APPAREL */
 
 /* MISC MISC MISC MISC MISC MISC MISC MISC MISC */

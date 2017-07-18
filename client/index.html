@@ -31,29 +31,26 @@
         <![endif]-->
     </head>
     <body>
-
         <div class="container">
             <!--HEADER HERE-->
-        <nav class="navbar navbar-fixed-top navbar-inverse">
-            <div class="container">
+        <nav class="navbar navbar-inverse">
                     <div class="container-fluid">
-                        <a class="brand" href="#">
-                            <img class="col-3-sm" src="/images/Newlogo.png">
+                        <a class="brand" href="/welcome">
+                            <img alt="Brand" class="col-3-sm nav-logo" src="/images/Newlogo.png">
                         </a>
-                        <a class="navbar-btn col-" role="button" href="/apparel">Apparel</a>
-                        <a class="navbar-btn" role="button" href="/misc">Misc</a>
+                        <a class="navbar-btn col-" role="button" href="/apparel">APPAREL</a>
+                        <a class="navbar-btn" role="button" href="/misc">MISC</a>
+                        <a class="navbar-btn col-" role="button" href="/contact">CONTACT</a>
                         <a class="navbar-btn navbar-right" role="button" href="/checkout">Cart</a>
+                        
                     </div>
-            </div>
         </nav>
-
+<!--END HEADER  -->
         <div ng-view></div>
             <!--FOOTER-->
 
-        <nav class="navbar navbar-fixed-bottom brand-footer">
-            <div class="container">
-                <img class="col-3-sm" src="/images/Newlogo.png">
-            </div>
+        <nav class="navbar brand-footer">
+                <img alt="Brand" class="col-3-sm nav-logo" src="/images/Newlogo.png">
             <p class="copyright">Copyright Covalence LLC</p>
         </nav>
 

@@ -1,22 +1,33 @@
 @font-face {
     font-family: my-font;
-    src: url(./fonts/BrandonGrotesque-Black.otf);
+    src: url(fonts/BrandonGrotesque-Black.otf);
 }
 
 * {
     font-family: my-font;
 }
 
-#contact {
-    background-image: url(images/covalence-store-misc-hero.jpg);
-}
+/* INDEX INDEX INDEX INDEX INDEX INDEX  */
+nav {
+    opacity: 0.89%;
+    width: 100%;
+    padding: 0.5em;
+    /* width: 71.45em;  */
+    /* margin-left: -10.5em; */
 
+}
 .brand {
     max-height: 10px;
     max-width: 10%; 
     overflow: visible;
     padding-top: 0;
     padding-bottom: 0;
+}
+.nav-logo {
+    height: 30px;
+    width: auto;
+    margin-top: 1em;
+    margin-bottom: 1em;
 }
 
 .brand-footer {
@@ -25,10 +36,10 @@
 }
 
 .copyright {
-    font-family: my-font;
     float: right;
 }
 
+/* WELCOME WELCOME WELCOME WELCOME WELCOME */
 .welcome {
     
     background-position: center;
@@ -50,3 +61,19 @@
     transform: translate(-50%, -50%);
     color: white;
 }
+
+/* APPAREL APPAREL APPAREL APPAREL APPAREL APPAREL */
+
+/* MISC MISC MISC MISC MISC MISC MISC MISC MISC */
+
+/* SINGLE SINGLE SINGLE SINGLE SINGLE SINGLE SINGLE */
+
+/* CONTACT CONTACT CONTACT CONTACT CONTACT CONTACT */
+
+#contact {
+    height: 15em;
+    width: 100%;
+    background-image: url("images/covalence-store-misc-hero.jpg");
+}
+
+/* CHECKOUT CHECKOUT CHECKOUT CHECKOUT CHECKOUT CHECKOUT */

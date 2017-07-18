@@ -104,3 +104,11 @@ li {
 }
 
 /* CHECKOUT CHECKOUT CHECKOUT CHECKOUT CHECKOUT CHECKOUT */
+.badge {
+    margin-bottom: .5em;
+    background-color: #2aabd2;
+}
+
+.payment-img {
+    width: 35px;
+}

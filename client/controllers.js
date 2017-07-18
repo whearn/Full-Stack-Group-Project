@@ -10,7 +10,7 @@ angular.module('storeApp.controllers', [])
     $scope.apparels = Apparel.query();
 
     SEOService.setSEO({
-        title: 'Apparel Page',
+        title: 'Covalance Store - Apparel',
         url: $location.url(),
         description: 'Covalence Store - Apparel'
     })
@@ -21,7 +21,7 @@ angular.module('storeApp.controllers', [])
     SEOService.setSEO({
         title: 'Covalence Store - Misc',
         url: $location.url(),
-        description: 'Covalence Misc'
+        description: 'Covalence Store - Misc'
     })
 }])
 .controller('ProductController', ['$scope', 'Product', 'SEOService', '$location', '$routeParams', function($scope, Product, SEOService, $location, $routeParams) {

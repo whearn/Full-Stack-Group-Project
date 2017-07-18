@@ -23,4 +23,14 @@ angular.module('storeApp.controllers', [])
         url: $location.url(),
         description: 'Covalence Misc'
     })
+}])
+.controller('ProductController', ['$scope', 'Product', 'SEOService', '$location', '$routeParams', function($scope, Product, SEOService, $location, $routeParams) {
+    $scope.product = Product.get({id: $routeParams.id});
+
+    SEOService.setSEO({
+            title: $scope.product.title,
+            url: $location.url(),
+            description: 'Covalence Store'
+    });
+
 }]);

@@ -1,6 +1,5 @@
 <div ng-repeat="apparel in apparels">
-    <img ng-src="{{ apparel.imageURL }}" alt="">
+    <a href="/{{ apparel.id }}"><img src="{{ apparel.imageURL }}" alt=""></a>
     <h1>{{ apparel.title }}</h1>
-    <p>{{ apparel.description }}</p>
     <p>{{ apparel.price | currency }}</p>
 </div>

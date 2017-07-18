@@ -43,3 +43,25 @@ nav {
 .copyright {
     float: right;
 }
+
+.welcome {
+    
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.welcome img {
+    width: 100%;
+    height: auto;
+}
+
+.hello-text {
+    float: left;
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    color: white;
+}

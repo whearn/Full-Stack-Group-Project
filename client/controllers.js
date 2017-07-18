@@ -1,5 +1,5 @@
 angular.module('storeApp.controllers', [])
-.controller('WelcomeController', ['$scope', 'SEOService', function($scope, SEOService,) {
+.controller('WelcomeController', ['$scope', 'SEOService', '$location', function($scope, SEOService, $location) {
     SEOService.setSEO({
         title: 'Covalence Store',
         url: $location.url(),
@@ -10,7 +10,7 @@ angular.module('storeApp.controllers', [])
     $scope.apparels = Apparel.query();
 
     SEOService.setSEO({
-        title: 'Covalance Store - Apparel',
+        title: 'Apparel Page',
         url: $location.url(),
         description: 'Covalence Store - Apparel'
     })
@@ -21,7 +21,7 @@ angular.module('storeApp.controllers', [])
     SEOService.setSEO({
         title: 'Covalence Store - Misc',
         url: $location.url(),
-        description: 'Covalence Store - Misc'
+        description: 'Covalence Misc'
     })
 }])
 .controller('ProductController', ['$scope', 'Product', 'SEOService', '$location', '$routeParams', function($scope, Product, SEOService, $location, $routeParams) {
@@ -34,15 +34,14 @@ angular.module('storeApp.controllers', [])
     });
 
 }])
-.controller('ContactController', ['$scope', 'SEOService', '$location', function($scope,  SEOService, $location) {
+.controller('ContactController', ['$scope', 'SEOService', 'Email', '$location', function($scope, SEOService, Email, $location) {
      $scope.contact = function() {
         var e = new Email ({
-            name: $scope.firstname,
+            name: $scope.name,
             email: $scope.email,
             message: $scope.message
         });
-        u.$save(function(success) {
-            $scope.users = User.query();
+        e.$save(function(success) {
             window.history.back();
         });
     }

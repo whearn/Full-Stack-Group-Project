@@ -51,5 +51,45 @@ angular.module('storeApp.controllers', [])
             url: $location.url(),
             description: 'Contact the Covalence Store'
     });
+}])
+.controller('CheckoutController', ['$scope', '$location', 'Checkout', 'SEOService', function($scope, $location, Checkout, SEOService) {
+    //stripe global variable created in index.html
+    var elements = stripe.elements();
+    var card = elements.create('card');
+    card.mount('#card-field');
 
+    //sets length to 0 so that .length === 0, and will not show until an error is created
+    $scope.errorMessage = '';
+
+    $scope.processCheckout = function() {
+        stripe.createToken(card, {
+            name: $scope.name,
+            address_line1: $scope.line1,
+            address_line2: $scope.line2,
+            address_city: $scope.city,
+            address_state: $scope.state
+        }).then(function(result) {
+            if (result.error) {
+                $scope.errorMessage = result.error.message;
+            } else {
+                //result.token is the card token
+                var d = new Checkout({
+                    token: result.token.id,
+                    amount: $scope.amount
+                });
+                d.$save(function() {
+                    alert('Thank you for your purchase!');
+                    $location.path('/');
+                }, function(err) {
+                    console.log(err);
+                });
+            }
+        });
+    }
+
+    SEOService.setSEO({
+        title: 'Covalence Store - Checkout',
+        url: $location.url(),
+        description: 'Checkout from the Covalence Store!'
+    })
 }]);

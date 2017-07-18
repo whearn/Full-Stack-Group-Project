@@ -31,31 +31,56 @@
         <![endif]-->
     </head>
     <body>
-        <div class="container">
+        <div class="container-fluid">
             <!--HEADER HERE-->
-        <nav class="navbar navbar-inverse">
-                    <div class="container-fluid">
-                        <a class="brand" href="/">
-                            <img alt="Brand" class="col-3-sm nav-logo" src="/images/Newlogo.png">
-                        </a>
-                        <a class="navbar-btn col-" role="button" href="/apparel">APPAREL</a>
-                        <a class="navbar-btn" role="button" href="/misc">MISC</a>
-                        <a class="navbar-btn col-" role="button" href="/contact">CONTACT</a>
-                        <a class="navbar-btn navbar-right" role="button" href="/checkout">Cart</a>
-                        
+        <nav class="navbar navbar-fixed-top navbar-inverse">
+            <div class="row">
+                <div class="col-md-1" id="first">
+                    <div class="nav-options"><a class="brand" href="/">
+                            <img alt="Brand" class="nav-logo" src="/images/Newlogo.png">
+                        </a></div>
+                </div>
+                <div class="col-md-2"><span></span></div>
+                <div class="col-md-3">
+                    <div class="nav-options">
+                        <p>
+                            <a class="navbar-btn col-" role="button" href="/apparel">APPAREL</a></p>
                     </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="nav-options">
+                        <p><a class="navbar-btn" role="button" href="/misc">MISC</a></p>
+                    </div></div>
+                    <div class="col-md-5">
+                        <div class="nav-options">
+                            <p>
+                                <a class="navbar-btn col-" role="button" href="/contact">CONTACT</a></p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <p> </p>
+                    </div>
+                    <div class="col-md-7">
+                        <div class="nav-options">
+                            <p>
+                                <a class="navbar-btn navbar-right" role="button" href="/checkout">Cart<span class="badge">#</span></a></p>
+                        </div>
+                    </div>
+
+                </div>
         </nav>
 <!--END HEADER  -->
-        <div ng-view></div>
+    </div>
+
+        <div ng-view class="view"></div>
             <!--FOOTER-->
-
-        <nav class="navbar brand-footer">
-                <img alt="Brand" class="col-3-sm nav-logo" src="/images/Newlogo.png">
+    <nav class="navbar brand-footer">
+        <div class="container-fluid">
+            <img alt="Brand" class="col-3-sm nav-logo" src="/images/logo-footer.svg">
             <p class="copyright">Copyright Covalence LLC</p>
-        </nav>
-
-
         </div>
+    </nav>
+
 
 
 
@@ -69,9 +94,9 @@
         <script src="services.js"></script>
         <!--<script src="directives.js"></script>-->
         <script src="https://js.stripe.com/v3/"></script>
-        <!--<script type="text/javascript">
+        <script type="text/javascript">
             var stripe = Stripe('pk_test_8zOqfrTl6yuy3YJdDh3I80fV');
-        </script>-->
+        </script>
         <script src="http://code.jquery.com/jquery-3.2.1.min.js"
             integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
             crossorigin="anonymous"></script>

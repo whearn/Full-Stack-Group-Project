@@ -19,6 +19,7 @@
     "express-session": "^1.15.3",
     "mysql": "^2.13.0",
     "prerender-node": "^2.7.2",
+    "sendgrid": "^5.1.2",
     "stripe": "^4.23.1"
   }
 }

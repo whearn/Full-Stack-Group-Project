@@ -1,5 +1,10 @@
-<div ng-repeat="apparel in apparels">
-    <a href="/{{ apparel.id }}"><img src="{{ apparel.imageURL }}" alt=""></a>
-    <h1>{{ apparel.title }}</h1>
-    <p>{{ apparel.price | currency }}</p>
+<div class="jumbotron">
+    <img src="/images/covalence-store-apparel-hero.jpg" alt="Covalence Apperal" class="product-hero">
+</div>
+<div class="row">
+    <div class="col-xs-8 col-md-4 products" ng-repeat="apparel in apparels">
+        <a href="/{{ apparel.id }}"><img src="{{ apparel.imageURL }}" class="thumbnail product-thumbnail" alt="{{ apparel.title }}"></a>
+        <a href="/{{ apparel.id }}"><h1>{{ apparel.title }}</h1></a>
+        <p>{{ apparel.price | currency }}</p>
+    </div>
 </div>

@@ -1,6 +1,5 @@
 <div ng-repeat="misc in miscs">
-    <img src="{{ misc.imageURL }}" alt="">
+    <a href="/{{ misc.id }}"><img src="{{ misc.imageURL }}" alt=""></a>
     <h1>{{ misc.title }}</h1>
-    <p>{{ misc.description }}</p>
     <p>{{ misc.price | currency }}</p>
 </div>

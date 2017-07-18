@@ -1,5 +1,7 @@
-<div ng-repeat="misc in miscs">
-    <a href="/{{ misc.id }}"><img src="{{ misc.imageURL }}" alt=""></a>
-    <h1>{{ misc.title }}</h1>
-    <p>{{ misc.price | currency }}</p>
+<div class="row">
+    <div class="col-xs-8 col-md-4 products" ng-repeat="misc in miscs">
+        <a href="/{{ misc.id }}"><img src="{{ misc.imageURL }}" class="thumbnail" width="250px" alt="{{ misc.title }}"></a>
+        <a href="/{{ misc.id }}"><h1>{{ misc.title }}</h1></a>
+        <p>{{ misc.price | currency }}</p>
+    </div>
 </div>

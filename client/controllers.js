@@ -92,5 +92,4 @@ angular.module('storeApp.controllers', [])
         url: $location.url(),
         description: 'Checkout from the Covalence Store!'
     })
->>>>>>> 994f4c3a6f5da5ef19d0ec022b4da511c4cca5f3
 }]);

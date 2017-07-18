@@ -2,13 +2,13 @@
 </div>
 <div class="header">
 </div>
-<form class="my-form text-center" ng-submit="contact()">
+<form class="my-form text-center">
     <div class="form-group">
     <h5>Need More Info?</h5>
     <h5>Send us your information, and one of our experts will get back in touch with you.</h5>
-        <input class="form-control" type="text" ng-model="contact.name" placeholder="Name">
-        <input class="form-control" type="email" ng-model="contact.email" placeholder="Email Address">
-        <input class="form-control" type="text" ng-model="contact.message" placeholder="Message">
+        <input class="form-control" type="text" ng-model="name" placeholder="Name">
+        <input class="form-control" type="email" ng-model="email" placeholder="Email Address">
+        <input class="form-control" type="text" ng-model="message" placeholder="Message">
     </div>
-    <input class="btn btn-success" type="submit"  ng-click="contact()" value="Save">
+    <input class="btn btn-success" type="submit"  ng-click="contact()" value="Send">
 </form>

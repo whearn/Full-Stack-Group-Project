@@ -1,10 +1,12 @@
 <div class="jumbotron">
     <img src="/images/covalence-store-misc-hero.jpg" alt="Covalence Misc" class="product-hero">
 </div>
+<div class="container-fluid">
 <div class="row">
     <div class="col-xs-8 col-md-4 products" ng-repeat="misc in miscs">
         <a href="/{{ misc.id }}"><img src="{{ misc.imageURL }}" class="thumbnail product-thumbnail" alt="{{ misc.title }}"></a>
         <a href="/{{ misc.id }}"><h1>{{ misc.title }}</h1></a>
         <p>{{ misc.price | currency }}</p>
     </div>
+</div>
 </div>

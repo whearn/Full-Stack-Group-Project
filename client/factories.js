@@ -16,4 +16,7 @@ angular.module('storeApp.factories', [])
 }])
 .factory('Email', ['$resource', function($resource) {
     return $resource('/api/contact/:id');
+}])
+.factory('Checkout', ['$resource', function($resource) {
+    return $resource('/api/checkout/:id');
 }]);

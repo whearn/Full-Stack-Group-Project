@@ -1,6 +1,6 @@
 @font-face {
     font-family: my-font;
-    src: url(./fonts/BranddonGrotesque-Black.otf);
+    src: url(fonts/BrandonGrotesque-Black.otf);
 }
 
 * {
@@ -8,15 +8,31 @@
 }
 
 #contact {
-    background-image: url(images/covalence-store-misc-hero.jpg);
+    height: 15em;
+    width: 100%;
+    background-image: url("images/covalence-store-misc-hero.jpg");
 }
 
+nav {
+    opacity: 0.89%;
+    width: 100%;
+    padding: 0.5em;
+    /* width: 71.45em;  */
+    /* margin-left: -10.5em; */
+
+}
 .brand {
     max-height: 10px;
     max-width: 10%; 
     overflow: visible;
     padding-top: 0;
     padding-bottom: 0;
+}
+.nav-logo {
+    height: 30px;
+    width: auto;
+    margin-top: 1em;
+    margin-bottom: 1em;
 }
 
 .brand-footer {
@@ -25,6 +41,5 @@
 }
 
 .copyright {
-    font-family: my-font;
     float: right;
 }

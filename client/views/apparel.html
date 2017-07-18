@@ -1,6 +1,7 @@
-<div class="jumbotron">
+ <div class="jumbotron">
+     
     <img src="/images/covalence-store-apparel-hero.jpg" alt="Covalence Apperal" class="product-hero">
-</div>
+</div><div class="container-fluid">
 <div class="row">
     <div class="col-xs-8 col-md-4 products" ng-repeat="apparel in apparels">
         <a href="/{{ apparel.id }}"><img src="{{ apparel.imageURL }}" class="thumbnail product-thumbnail" alt="{{ apparel.title }}"></a>
@@ -8,3 +9,4 @@
         <p>{{ apparel.price | currency }}</p>
     </div>
 </div>
+ </div> 

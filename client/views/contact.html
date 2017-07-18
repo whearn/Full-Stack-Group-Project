@@ -1,27 +1,14 @@
 <div class="jumbotron" id="contact">
 </div>
 <div class="header">
-    <h1></h1>
 </div>
-<form class="my-form" ng-submit="save()">
+<form class="my-form text-center" ng-submit="contact()">
     <div class="form-group">
-        <input class="form-control" type="text" ng-model="post.title" placeholder="Email Address">
+    <h5>Need More Info?</h5>
+    <h5>Send us your information, and one of our experts will get back in touch with you.</h5>
+        <input class="form-control" type="text" ng-model="contact.name" placeholder="Name">
+        <input class="form-control" type="email" ng-model="contact.email" placeholder="Email Address">
+        <input class="form-control" type="text" ng-model="contact.message" placeholder="Message">
     </div>
-
-    <div class="form-group">
-    <select class="form-control" ng-model="post.categoryid">
-        <option value="">Select Category</option>
-        <option ng-repeat="c in categories" value="{{ c.id }}">{{ c.name }}</option>
-    </select>
-    </div>
-    <div class="form-group">
-    <select class="form-control" ng-model="post.userid">
-        <option value="">Select User</option>
-        <option ng-repeat="u in users" value="{{ u.id }}">{{ u.firstname }} {{ u.lastname }}</option>
-    </select>
-    </div>
-    <div class="form-group">
-    <textarea class="form-control" ng-model="post.content"></textarea>
-    </div>
-    <input class="btn btn-success" type="submit" value="Save">
+    <input class="btn btn-success" type="submit"  ng-click="contact()" value="Save">
 </form>

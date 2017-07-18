@@ -33,4 +33,24 @@ angular.module('storeApp.controllers', [])
             description: 'Covalence Store'
     });
 
+}])
+.controller('ContactController', ['$scope', 'SEOService', '$location', function($scope,  SEOService, $location) {
+     $scope.contact = function() {
+        var e = new Email ({
+            name: $scope.firstname,
+            email: $scope.email,
+            message: $scope.message
+        });
+        u.$save(function(success) {
+            $scope.users = User.query();
+            window.history.back();
+        });
+    }
+
+    SEOService.setSEO({
+            title: 'Contact Us',
+            url: $location.url(),
+            description: 'Contact the Covalence Store'
+    });
+
 }]);

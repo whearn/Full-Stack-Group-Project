@@ -67,7 +67,9 @@ angular.module('storeApp.controllers', [])
             address_line1: $scope.line1,
             address_line2: $scope.line2,
             address_city: $scope.city,
-            address_state: $scope.state
+            address_state: $scope.state,
+            address_zip: $scope.zip,
+            address_country: $scope.country
         }).then(function(result) {
             if (result.error) {
                 $scope.errorMessage = result.error.message;
@@ -79,7 +81,7 @@ angular.module('storeApp.controllers', [])
                 });
                 d.$save(function() {
                     alert('Thank you for your purchase!');
-                    $location.path('/');
+                    $location.path('/apparel');
                 }, function(err) {
                     console.log(err);
                 });

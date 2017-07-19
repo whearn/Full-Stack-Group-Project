@@ -109,6 +109,10 @@ li {
 .product-thumbnail {
     width: 250px;
 }
+
+.single-container {
+    margin: 10em 5em 2em;
+}
 /* CONTACT CONTACT CONTACT CONTACT CONTACT CONTACT */
 
 #contact {

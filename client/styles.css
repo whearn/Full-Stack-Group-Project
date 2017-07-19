@@ -47,6 +47,13 @@ li {
     color: rgb(67, 182, 200);
 }
 
+.custom-top {
+    position: absolute;
+    left:0;
+    border-radius: 0;
+    z-index: 1000;
+}
+
 .brand-footer {
     background-color: rgb(244, 244, 244);
     color: rgb(209, 210, 212);
@@ -89,7 +96,9 @@ li {
 }
 
 /* APPAREL APPAREL APPAREL APPAREL APPAREL APPAREL */
-
+.jumbotron {
+    padding-top:0;
+}
 /* MISC MISC MISC MISC MISC MISC MISC MISC MISC */
 
 /* SINGLE SINGLE SINGLE SINGLE SINGLE SINGLE SINGLE */
@@ -109,6 +118,13 @@ li {
 }
 
 /* CHECKOUT CHECKOUT CHECKOUT CHECKOUT CHECKOUT CHECKOUT */
+.checkout-container {
+    margin: 10em 5em 2em;
+    border: lightgray solid 1px;
+    overflow: auto;
+    padding: 1em;
+}
+
 .badge {
     margin-bottom: .5em;
     background-color: #2aabd2;
@@ -116,4 +132,8 @@ li {
 
 .payment-img {
     width: 35px;
+}
+
+.purchase-btn-container {
+    text-align: center;
 }

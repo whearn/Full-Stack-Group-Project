@@ -34,7 +34,7 @@
       </div>
       <div class="form-group col-md-6">
         <!--<input class="form-control" type="text" ng-model="state" placeholder="State">-->
-        <select class="form-control">
+        <select id="state-selector" class="form-control" ng-model="state">
           <option val="">State</option>
           <option value="AL">Alabama</option>
           <option value="AK">Alaska</option>
@@ -96,7 +96,7 @@
       </div>
       <div class="form-group col-md-6">
         <!--<input class="form-control" type="text" ng-model="country" placeholder="United States">-->
-        <select  class="form-control">
+        <select id="country-selector"  class="form-control" ng-model="country">
           <option value="US">United States</option>
           <option value="CA">Canada</option>
           <option value="MX">Mexico</option>
@@ -104,9 +104,9 @@
         </select>
       </div>
     </div>
-    <!--<div class="form-group">
+    <div class="form-group">
       <input class="form-control" type="number" step=".01" ng-model="amount" placeholder="Amount">
-    </div>-->
+    </div>
     <div class="form-group">
       <h3><span class="badge">3</span><label for="card-field">Payment Method</label></h3>
       <div class="radio">

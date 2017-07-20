@@ -11,9 +11,10 @@ angular.module('storeApp.controllers', [])
     if(localStorage.items === undefined) 
         localStorage.items = angular.toJson([]);
     $scope.cartTotal = angular.fromJson(localStorage.items).length;
-
-    //look up rootscope.prodcast to refresh badge counter
-    //create service for navbar if dont want to use above
+    $scope.$on("cartChanged", function() {
+        console.log('test2');
+        $scope.cartTotal = angular.fromJson(localStorage.items).length;
+    })
 }])
 .controller('ApparelController', ['$scope', 'Apparel', 'SEOService', '$location', function($scope, Apparel, SEOService, $location) {
     $scope.apparels = Apparel.query();
@@ -33,7 +34,7 @@ angular.module('storeApp.controllers', [])
         description: 'Covalence Misc'
     })
 }])
-.controller('ProductController', ['$scope', 'Product', 'SEOService', '$location', '$routeParams', function($scope, Product, SEOService, $location, $routeParams) {
+.controller('ProductController', ['$scope', '$rootScope', 'Product', 'SEOService', '$location', '$routeParams', function($scope, $rootScope, Product, SEOService, $location, $routeParams) {
     $scope.product = Product.get({id: $routeParams.id});
 
     if(localStorage.items === undefined) 
@@ -45,6 +46,7 @@ angular.module('storeApp.controllers', [])
         cachedItems.push($scope.product);// [[title, description, image, price],[title, description, image, price], ...]
         localStorage.items = JSON.stringify(cachedItems);// "[[title, description, image, price],[title, description, image, price], ...] "
         //localStorage.setItem('product', JSON.stringfy($scope.product)); <-previous way
+        $rootScope.$broadcast("cartChanged");
     }
 
     SEOService.setSEO({
@@ -72,7 +74,7 @@ angular.module('storeApp.controllers', [])
             description: 'Contact the Covalence Store'
     });
 }])
-.controller('CheckoutController', ['$scope', '$location', 'Checkout', 'SEOService', function($scope, $location, Checkout, SEOService) {
+.controller('CheckoutController', ['$scope', '$rootScope', '$location', 'Checkout', 'SEOService', function($scope, $rootScope, $location, Checkout, SEOService) {
     //stripe global variable created in index.html
 
     if(localStorage.items === undefined) 
@@ -95,6 +97,7 @@ angular.module('storeApp.controllers', [])
 
         localStorage.items = angular.toJson($scope.cart);
         $scope.total -= product.price;
+        $rootScope.$broadcast("cartChanged");
     }
 
     let discountCode10 = 'ThunderCats';

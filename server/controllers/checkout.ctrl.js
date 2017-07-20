@@ -29,18 +29,6 @@ router.post('/', function(req, res) {
         console.log(err);
         res.sendStatus(500);
     });
-    // let content = `<h3>Thank you for shopping with Covalence ${req.body.name}</h3>
-    //                 <h5>${req.body.products}</h5>
-    //                 <p>Your total: ${req.body.total}</p>`;
-
-    // mailService.sendEmail(req.body.email, 'no-reply@covalencemerch.io', 'Your Covalence Receipt', content)
-    // .then(function(success) {
-    //     console.log(success);
-    //     res.sendStatus(201);
-    // }).catch(function(err) {
-    //     console.log(err);
-    //     res.sendStatus(500);
-    // });
 })
 
 module.exports = router;

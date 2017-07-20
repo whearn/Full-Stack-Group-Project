@@ -126,6 +126,11 @@ li {
     margin: 10em 5em 2em;
     border: lightgray solid 1px;
     overflow: auto;
+    background-color: lightgray;
+}
+
+.payment-form {
+    background-color: white;
     padding-bottom: 1em;
 }
 

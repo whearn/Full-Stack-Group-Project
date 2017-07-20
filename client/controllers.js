@@ -145,7 +145,8 @@ angular.module('storeApp.controllers', [])
                 var d = new Checkout({
                     token: result.token.id,
                     amount: $scope.total,
-                    productid: $scope.cart,
+                    products: $scope.cart,
+                    email: $scope.email
                 });
                 d.$save(function() {
                     $location.path('/apparel');

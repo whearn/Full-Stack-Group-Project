@@ -159,3 +159,11 @@ li {
 .order-total-right {
     text-align: right;
 }
+
+.cart-item {
+    margin-bottom: 1em;
+}
+
+.cart-img {
+    width: 75px;
+}

@@ -4,27 +4,31 @@
 }
 * {
     font-family: my-font;
+    letter-spacing: 0.115em;
     box-sizing: border-box;
 }
 
-/* a:active, a:visited, a:link {
-    text-decoration: none;
-    color: rgb(67, 182, 200);
-}
- a:hover {
+ .navbar-btn:hover {
     color: white;
-}  */
+}  
+
 /* INDEX INDEX INDEX INDEX INDEX INDEX  */
 
 nav {
     opacity: 0.9;
     width: 100%;
-    padding: 0.5em;
+    padding: 0.4em;
 }
-/* .nav-options:hover {
+/* .nav-options:visited {
     border-bottom: 3px solid white;
 } */
+.spacer {
+     border-right: 1px solid rgb(67, 182, 200);
+     height: 1em;
+}
+#spacer {
 
+}
 .navbar-inverse .navbar-nav>li>a {
     color: rgb(67, 182, 200);
 }
@@ -52,6 +56,8 @@ li {
     left:0;
     border-radius: 0;
     z-index: 1000;
+    border: none;
+    height: 10%;
 }
 
 .brand-footer {
@@ -60,6 +66,7 @@ li {
 }
 .copyright {
     float: right;
+    margin-top: 1.25em;
 }
 /* WELCOME WELCOME WELCOME WELCOME WELCOME */
 .welcome {
@@ -87,17 +94,36 @@ li {
     transform: translate(-50%, -50%);
     color: white;
 }
+.hello-text h1 {
+    font-size: 3.75em;
+}
+#shop-btn {
+    margin-top: 1.5em;
+    border-radius: none;
+    padding: 1em;
+}
 #shop-btn:focus {
     outline: 0;
 }
-
-.welcome-startbtn:hover {
-    text-decoration: none;
+.btn {
+    font-weight: lighter;
 }
+ /* .welcome-startbtn:hover {
+    font-weight: lighter;
+}  */
 
 /* APPAREL APPAREL APPAREL APPAREL APPAREL APPAREL */
 .jumbotron {
     padding-top:0;
+}
+.products {
+    height: 25em;
+    width: 25em;
+    border: 1px solid blue;
+}
+.product {
+    height: 20em;
+    width: auto;
 }
 /* MISC MISC MISC MISC MISC MISC MISC MISC MISC */
 

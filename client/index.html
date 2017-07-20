@@ -35,7 +35,7 @@
 </head>
 
 <body>
-    <div class="container-fluid">
+    <div class="container-fluid" ng-controller="NavController">
         <!--HEADER HERE-->
         <nav class="navbar navbar-inverse custom-top">
             <div class="navbar-header">
@@ -48,7 +48,7 @@
                 <li><a class="navbar-btn" role="button" href="/contact">CONTACT</a></li>
                 </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li><a class="navbar-btn" role="button" href="/checkout">Cart <span class="badge">#</span></a></li>
+                <li><a class="navbar-btn" role="button" href="/checkout">Cart <span class="badge">{{ cartTotal }}</span></a></li>
             </ul>
             </div>
         </nav>

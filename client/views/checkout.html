@@ -1,5 +1,5 @@
 <div class="checkout-container">  
-  <div class="col-md-8">
+  <div class="col-md-8 payment-form">
     <form class="my-form" ng-submit="processCheckout()">
         <div class="form-group">
           <h3><span class="badge">1</span><label for="">Your Email</label></h3>
@@ -107,9 +107,6 @@
           </div>
         </div>
         <div class="form-group">
-          <input class="form-control" type="number" step=".01" ng-model="amount" placeholder="Amount">
-        </div>
-        <div class="form-group">
           <h3><span class="badge">3</span><label for="card-field">Payment Method</label></h3>
           <div class="radio">
             <label>
@@ -131,5 +128,22 @@
           <input class="btn btn-info" type="submit" value="Submit Your Order">
         </div>
     </form>
+  </div>
+  <div class="col-md-4 checkout-cart form-group">
+    <h1>Your Shopping Cart</h1>
+    <a href="/apparel"><input class="btn btn-default" type="submit" value="<< Cancel and continue Shopping"></a>
+    <h1>Order Summary</h1>
+    <div class="input-group">
+      <div ng-repeat="product in cart"><img src="{{ product.imageURL }}" alt=""> {{ product.title }} ${{ product.price}}
+        <button class="btn btn-danger btn-xs" ng-click="removeItem(product)">Remove</button>
+      </div>
+      <input class="form-control" type="text" ng-model="discountValue" placeholder="Discount Code"><button class="btn" ng-click="applyDiscount()">Apply</button>
+    </div>
+    <div class="col-md-6 order-total-left">
+      <h3>Order Total:</h3>
+    </div>
+    <div class="col-md-6 order-total-right">
+      <h3>{{ total | currency}}</h3>
+    </div>
   </div>
 </div>

@@ -152,7 +152,12 @@ li {
     margin: 10em 5em 2em;
     border: lightgray solid 1px;
     overflow: auto;
-    padding: 1em;
+    background-color: lightgray;
+}
+
+.payment-form {
+    background-color: white;
+    padding-bottom: 1em;
 }
 
 .badge {
@@ -166,4 +171,17 @@ li {
 
 .purchase-btn-container {
     text-align: center;
+}
+
+.checkout-cart {
+    background-color: lightgray;
+    text-align: center;
+}
+
+.order-total-left {
+    text-align: left;
+}
+
+.order-total-right {
+    text-align: right;
 }

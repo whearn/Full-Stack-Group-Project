@@ -1,5 +1,6 @@
 var express = require('express');
 var stripeSvc = require('../services/stripe.svc');
+var mailService = require('../services/email.svc');
 
 var router = express.Router();
 

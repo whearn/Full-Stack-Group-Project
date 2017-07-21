@@ -12,9 +12,12 @@ angular.module('storeApp.controllers', [])
         localStorage.items = angular.toJson([]);
     $scope.cartTotal = angular.fromJson(localStorage.items).length;
     $scope.$on("cartChanged", function() {
-        console.log('test2');
         $scope.cartTotal = angular.fromJson(localStorage.items).length;
     })
+    $scope.$on("purchase", function() {
+        $scope.cartTotal = 0;
+    })
+    
 }])
 .controller('ApparelController', ['$scope', 'Apparel', 'SEOService', '$location', function($scope, Apparel, SEOService, $location) {
     $scope.apparels = Apparel.query();
@@ -116,6 +119,7 @@ angular.module('storeApp.controllers', [])
         }
     }
 
+
     var elements = stripe.elements();
     var card = elements.create('card');
     card.mount('#card-field');
@@ -124,8 +128,9 @@ angular.module('storeApp.controllers', [])
     $scope.errorMessage = '';
 
     $scope.processCheckout = function() {
+        var fullname = String($scope.firstName) + " " + String($scope.lastName);
         stripe.createToken(card, {
-            name: $scope.name,
+            name: fullname,
             address_line1: $scope.line1,
             address_line2: $scope.line2,
             address_city: $scope.city,
@@ -139,11 +144,15 @@ angular.module('storeApp.controllers', [])
                 //result.token is the card token
                 var d = new Checkout({
                     token: result.token.id,
-                    amount: $scope.amount
+                    amount: $scope.total,
+                    products: $scope.cart,
+                    email: $scope.email
                 });
                 d.$save(function() {
-                    alert('Thank you for your purchase!');
                     $location.path('/apparel');
+                    alert('Thank you for your purchase!');
+                    localStorage.clear();
+                    $rootScope.$broadcast("purchase");
                 }, function(err) {
                     console.log(err);
                 });

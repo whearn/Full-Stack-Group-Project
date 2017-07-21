@@ -134,8 +134,14 @@
     <a href="/apparel"><input class="btn btn-default" type="submit" value="<< Cancel and continue Shopping"></a>
     <h1>Order Summary</h1>
     <div class="input-group">
-      <div ng-repeat="product in cart"><img src="{{ product.imageURL }}" alt=""> {{ product.title }} ${{ product.price}}
-        <button class="btn btn-danger btn-xs" ng-click="removeItem(product)">Remove</button>
+      <div class="col-md-12 cart-item" ng-repeat="product in cart">
+        <div class="col-md-6">
+          <img class="cart-img" src="{{ product.imageURL }}" alt="">
+        </div>
+        <div class="col-md-6">
+          {{ product.title }} ${{ product.price}}
+          <button class="btn btn-danger btn-xs" ng-click="removeItem(product)">Remove</button>
+        </div>
       </div>
       <input class="form-control" type="text" ng-model="discountValue" placeholder="Discount Code"><button class="btn" ng-click="applyDiscount()">Apply</button>
     </div>

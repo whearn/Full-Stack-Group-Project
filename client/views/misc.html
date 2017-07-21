@@ -2,11 +2,14 @@
     <img src="/images/covalence-store-misc-hero.jpg" alt="Covalence Misc" class="product-hero">
 </div>
 <div class="container-fluid">
-<div class="row">
-    <div class="col-xs-8 col-md-4 products" ng-repeat="misc in miscs">
-        <a href="/{{ misc.id }}"><img src="{{ misc.imageURL }}" class="thumbnail product-thumbnail" alt="{{ misc.title }}"></a>
-        <a href="/{{ misc.id }}"><h1>{{ misc.title }}</h1></a>
-        <p>{{ misc.price | currency }}</p>
-    </div>
-</div>
+     <div class="row"> 
+        <div class="col-xs-12 col-md-4 col-sm-6" ng-repeat="misc in miscs">
+            <div class="center-block products">
+                <a href="/{{ misc.id }}"><img src="{{ misc.imageURL }}" class="thumbnail product-thumbnail product img-responsive" alt="{{ apparel.title }}"></a>
+                <a href="/{{ misc.id }}"><div class="grid-market">
+                    <h4 class="description">{{ misc.title }}
+                <span class="currency">{{ misc.price | currency }}</span></h4></div></a>
+            </div>
+        </div>
+     </div> 
 </div>

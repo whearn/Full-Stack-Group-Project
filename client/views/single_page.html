@@ -1,18 +1,25 @@
 <div class="single-container">
     <div class="container-fluid">
-        <div class="col-md-6">
-            <img src="{{ product.imageURL }}" alt="">
+        <div class="row">
+        <div class="col-md-6 col-xs-12">
+            <img src="{{ product.imageURL }}" alt="Selected Product" class="img-responsive">
         </div>
-        <div class="col-md-6">
-            <h2>{{ product.price | currency }}</h2>
-            <h1>{{ product.title }}</h1>
-            <p>{{ product.description }}</p>
-            <ul>
-                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in mi et lorem hendrerit dictum nec non enim.</li>
-                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in mi et lorem hendrerit dictum nec non enim.</li>
-                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in mi et lorem hendrerit dictum nec non enim.</li>
-            </ul>
+        <div class="col-xs-12 col-md-6 col-sm-3">
+            <div class="center-block products">
+                <h2 class="currency-b">{{ product.price | currency }}</h2>
+                <h1 class="description">{{ product.title }}</h1>
+                <p class="description-b">{{ product.description }}</p>
+                <ul class="description-b">
+                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in mi et lorem hendrerit dictum nec non
+                        enim.</li>
+                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in mi et lorem hendrerit dictum nec non
+                        enim.</li>
+                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in mi et lorem hendrerit dictum nec non
+                        enim.</li>
+                </ul>
+                <button ng-click="addItem()" class="btn btn-info btn-md"><span id="btn-text">Add To Cart</span></button>
+            </div>
         </div>
-    <button ng-click="addItem()" class="btn btn-info btn-md"><span id="btn-text">Add To Cart</span></button>
     </div>
+</div>
 </div>

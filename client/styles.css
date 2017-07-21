@@ -8,9 +8,13 @@
     box-sizing: border-box;
 }
 
- .navbar-btn:hover {
+ .nav-text:hover {
     color: white;
-}  
+} 
+.nav-text:active {
+    border-bottom: rgb(67, 182, 200);
+}
+
 
 /* INDEX INDEX INDEX INDEX INDEX INDEX  */
 
@@ -19,34 +23,49 @@ nav {
     width: 100%;
     padding: 0.4em;
 }
-/* .nav-options:visited {
-    border-bottom: 3px solid white;
-} */
-.spacer {
-     border-right: 1px solid rgb(67, 182, 200);
-     height: 1em;
+.line {
+    background-color: none;
+    background-image: none;
+    border-left: 3px solid rgb(67, 182, 200);
+    margin-top: 0.75em;
+    height: 2.75em;
 }
-#spacer {
-
+ #pipe {
+    font-size: 2.25em;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline;
+} 
+.disabled {
+   pointer-events: none;
+   cursor: default;
 }
 .navbar-inverse .navbar-nav>li>a {
     color: rgb(67, 182, 200);
+}
+.navbar-inverse .navbar-nav>.active:active {
+    background-color: none;
+    border-bottom: 3px solid rgb(67, 182, 200);
 }
 .nav-logo {
     height: 30px;
     width: auto;
     margin-top: 1em;
-    margin-bottom: 1em;
     margin-left: 1em;
-}
-.nav-right {
-    border-left: 3px solid rgb(67, 182, 200);
+    margin-right: 1.5em;
 }
 li {
-    color: black;
+    margin-right: 1.5em;
 }
-.navbar-btn {
-    /* margin-top: 0.9em; */
+.nav-logo-b {
+    height: 30px;
+    width: auto;
+    margin-top: 1em;
+    margin-left: 1em;
+}
+
+.nav-text {
+    margin-top: 0.3em; 
     font-size: 1.25em;
     color: rgb(67, 182, 200);
 }
@@ -57,12 +76,12 @@ li {
     border-radius: 0;
     z-index: 1000;
     border: none;
-    height: 10%;
 }
 
 .brand-footer {
     background-color: rgb(244, 244, 244);
     color: rgb(209, 210, 212);
+    padding: 1em;
 }
 .copyright {
     float: right;
@@ -108,24 +127,43 @@ li {
 .btn {
     font-weight: lighter;
 }
- /* .welcome-startbtn:hover {
-    font-weight: lighter;
-}  */
 
-/* APPAREL APPAREL APPAREL APPAREL APPAREL APPAREL */
+/* APPAREL MISC APPAREL MISC APPAREL APPAREL MISC */
 .jumbotron {
     padding-top:0;
+    background-color: white;
 }
-.products {
-    height: 25em;
-    width: 25em;
-    border: 1px solid blue;
+.row {
+    margin-bottom: 5em;
 }
+ .thumbnail {
+    background-color:white;
+    border: white;
+    border-radius: 0em;
+    transition: none;
+    padding: 0em;
+} 
 .product {
-    height: 20em;
+    min-width: 20em;
+    min-height: 20em;
     width: auto;
+    height: auto;
 }
-/* MISC MISC MISC MISC MISC MISC MISC MISC MISC */
+ .grid-market {
+    margin-bottom: 1em;
+    width: 20em;
+} 
+.products {
+    max-width: 20em;
+}
+
+.description {
+    color: rgb(118,120, 133);
+}
+.currency {
+    color: rgb(67, 182, 200);
+    float: right;
+}
 
 /* SINGLE SINGLE SINGLE SINGLE SINGLE SINGLE SINGLE */
 .product-hero {
@@ -139,14 +177,40 @@ li {
 .single-container {
     margin: 10em 5em 2em;
 }
+.currency-b {
+    color: rgb(67, 182, 200);
+    /* float: right; */
+}
+.description-b {
+    color: rgb(118,120, 133);
+    font-size: 0.85em;
+}
 /* CONTACT CONTACT CONTACT CONTACT CONTACT CONTACT */
 
-#contact {
-    height: 15em;
+#contact-img {
+     height: 24.15em; 
     width: 100%;
     background-image: url("images/covalence-store-misc-hero.jpg");
 }
-
+.ask {
+    margin-bottom: 1em;
+}
+textarea {
+    resize: none;
+}
+#contact-btn {
+    background-color: rgb(67, 182, 200);
+    color: white;
+    width: 10em;
+    height: 2em;
+    font-size: 1.25em;
+    text-align: center;
+    font-weight: normal;
+    margin-bottom: 3em;
+}
+#contact-btn:focus {
+    outline: none;
+}
 /* CHECKOUT CHECKOUT CHECKOUT CHECKOUT CHECKOUT CHECKOUT */
 .checkout-container {
     margin: 10em 5em 2em;

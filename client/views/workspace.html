@@ -1,37 +1,102 @@
-<nav class="navbar navbar-fixed-top navbar-inverse">
-    <div class="row">
-        <div class="col-md-1" id="first">
-            <div class="nav-options"><a class="brand" href="/">
-                            <img alt="Brand" class="nav-logo" src="/images/Newlogo.png">
-                        </a></div>
+<div class="container" ng-controller="NavController">
+      <nav class="navbar navbar-inverse custom-top" role="navigation">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/images/Newlogo.png"></a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse" aria-expanded="false" style="height: 1px;">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="/apparel">APPAREL</a></li>
+              <li><a href="/misc">MISC</a></li>
+              <li><a href="/CONTACT">CONTACT</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a class="navbar-btn" role="button" href="/checkout">Cart <span class="badge">{{ cartTotal }}</span></a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+    </div>
+
+
+
+
+
+ <!--VERSION 2-->
+        <div class="container-fluid" ng-controller="NavController">
+        <!--HEADER HERE-->
+        <nav class="navbar navbar-inverse custom-top" role="navigation">
+            <ul class="nav navbar-nav navbar-left">
+            <li><a class="brand" href="/"><img alt="Brand" class="nav-logo" src="/images/Newlogo.png"></a></li>
+            <li><a href="#" class="navbar-btn disabled" role="button"><p class="pipe">|</p></a></li></ul>
+            <div class="navbar-header navbar-right">
+                <!-- <div class="spacer"> -->
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
         </div>
-        <div class="col-md-2"><span></span></div>
-        <div class="col-md-3">
-            <div class="nav-options">
-                <p>
-                    <a class="navbar-btn col-" role="button" href="/apparel">APPAREL</a></p>
+    <!-- </div> -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-left">
+                <li><a class="navbar-btn" role="button" href="/apparel">APPAREL</a></li>
+                <li><a class="navbar-btn" role="button" href="/misc">MISC</a></li>
+                <li><a class="navbar-btn" role="button" href="/contact">CONTACT</a></li>
+                </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a class="navbar-btn" role="button" href="/checkout">Cart <span class="badge">{{ cartTotal }}</span></a></li>
+            </ul>
             </div>
-        </div>
-        <div class="col-md-4">
-            <div class="nav-options">
-                <p><a class="navbar-btn" role="button" href="/misc">MISC</a></p>
+    </div></nav>
+
+
+
+
+<!--VERSION 1-->
+
+<nav class="navbar navbar-inverse custom-top">
+            <div class="navbar-header">
+                <div class="spacer">
+                <a class="brand" href="/"><img alt="Brand" class="nav-logo" src="/images/Newlogo.png"></a></div></div>
+            <ul class="nav navbar-nav">
+                <li id="spacer"><a class="navbar-btn" role="button">|</a></li>
+                <li><a class="navbar-btn" role="button" href="/apparel">APPAREL</a></li>
+                <li><a class="navbar-btn" role="button" href="/misc">MISC</a></li>
+                <li><a class="navbar-btn" role="button" href="/contact">CONTACT</a></li>
+                </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a class="navbar-btn" role="button" href="/checkout">Cart <span class="badge">{{ cartTotal }}</span></a></li>
+            </ul>
             </div>
-        </div>
-        <div class="col-md-5">
-            <div class="nav-options">
-                <p>
-                    <a class="navbar-btn col-" role="button" href="/contact">CONTACT</a></p>
-            </div>
-        </div>
-        <div class="col-md-6">
-            <p> </p>
-        </div>
-        <div class="col-md-7">
-            <div class="nav-options">
-                <p>
-                    <a class="navbar-btn navbar-right" role="button" href="/checkout">Cart<span class="badge">#</span></a></p>
-            </div>
+        </nav>
+<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
         </div>
 
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li><a href="index.php">Home</a></li>
+                <li><a href="about.php">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="contact.php">Contact</a></li>
+            </ul>
+        </div>
     </div>
 </nav>

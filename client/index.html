@@ -35,32 +35,45 @@
 </head>
 
 <body>
-    <div class="container-fluid" ng-controller="NavController">
-        <!--HEADER HERE-->
-        <nav class="navbar navbar-inverse custom-top">
-            <div class="navbar-header">
-                <div class="spacer">
-                <a class="brand" href="/"><img alt="Brand" class="nav-logo" src="/images/Newlogo.png"></a></div></div>
+<!--HEADER  -->
+    <div class="container" ng-controller="NavController">
+      <nav class="navbar navbar-inverse custom-top" role="navigation">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="brand nav-logo" href="/">
+                <img alt="Brand" class="nav-logo" src="/images/Newlogo.png">
+            </a>
+            <!-- <ul class="nav navbar-nav navbar-left">
+            <li><a class="brand nav-logo" href="/"><img alt="Brand" class="nav-logo" src="/images/Newlogo.png"></a></li>
+            <li><a href="#" class="pipe disabled" role="button"><p id="pipe">|</p></a></li></ul> -->
+          </div>
+          <div id="navbar" class="navbar-collapse collapse" aria-expanded="false" style="height: 1px;">
             <ul class="nav navbar-nav">
-                <li id="spacer"><a class="navbar-btn" role="button">|</a></li>
-                <li><a class="navbar-btn" role="button" href="/apparel">APPAREL</a></li>
-                <li><a class="navbar-btn" role="button" href="/misc">MISC</a></li>
-                <li><a class="navbar-btn" role="button" href="/contact">CONTACT</a></li>
-                </ul>
-            <ul class="nav navbar-nav navbar-right">
-                <li><a class="navbar-btn" role="button" href="/checkout">Cart <span class="badge">{{ cartTotal }}</span></a></li>
+                <li class="line"> </li>
+              <li class="active"><a href="/apparel" class="nav-text underline">APPAREL</a></li>
+              <li class="active"><a href="/misc" class="nav-text">MISC</a></li>
+              <li class="active"><a href="/contact" class="nav-text">CONTACT</a></li>
             </ul>
-            </div>
-        </nav>
-
-        <!--END HEADER  -->
+            <ul class="nav navbar-nav navbar-right">
+              <li class="active"><a class="nav-text" href="/checkout">Cart <span class="badge">{{ cartTotal }}</span></a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
     </div>
+        <!--END HEADER  -->
 
     <div ng-view class="view"></div>
     <!--FOOTER-->
     <div class="col-md-12 brand-footer">
         <div class="container-fluid">
-            <img alt="Brand" class="col-3-sm nav-logo" src="/images/logo-footer.svg">
+            <img alt="Brand" class="col-3-sm nav-logo-b" src="/images/logo-footer.svg">
             <p class="copyright">Copyright Covalence LLC</p>
         </div>
     </div>

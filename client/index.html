@@ -56,9 +56,18 @@
           <div id="navbar" class="navbar-collapse collapse" aria-expanded="false" style="height: 1px;">
             <ul class="nav navbar-nav">
                 <li class="line"> </li>
-              <li class="underline"><a href="/apparel" class="nav-text">APPAREL</a></li>
-              <li class="underline"><a href="/misc" class="nav-text">MISC</a></li>
-              <li class="underline"><a href="/contact" class="nav-text">CONTACT</a></li>
+              <li class="underline">
+                  <a href="/apparel" class="nav-text" ng-class="{'selected-nav' : selected==='apparel'}" 
+                  ng-click="selected = 'apparel'">APPAREL</a>
+              </li>
+              <li class="underline">
+                  <a href="/misc" class="nav-text" ng-class="{'selected-nav' : selected==='misc'}"  
+                  ng-click="selected = 'misc'">MISC</a>
+               </li>
+              <li class="underline">
+                  <a href="/contact" class="nav-text" ng-class="{'selected-nav' : selected==='contact'}" 
+                  ng-click="selected = 'contact'">CONTACT</a>
+              </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
               <li><a class="nav-text" href="/checkout">Cart <span class="badge">{{ cartTotal }}</span></a></li>

@@ -67,7 +67,8 @@ angular.module('storeApp.controllers', [])
             message: $scope.message
         });
         e.$save(function(success) {
-            window.history.back();
+            location.replace('/');
+            alert('Thanks for the message. Happy Shopping!')
         });
     }
 

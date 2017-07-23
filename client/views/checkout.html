@@ -2,10 +2,11 @@
   <div class="col-md-8 payment-form">
     <form class="my-form" ng-submit="processCheckout()">
         <div class="form-group">
-          <h3><span class="badge">1</span><label for="">Your Email</label></h3>
+          <br>
+          <h3><span class="badge">1</span> <label for="">   Your Email</label></h3>
           <input class="form-control" type="email" ng-model="email" placeholder="you@email.com">
         </div>
-        <h3><span class="badge">2</span><label for="">Your Billing Address</label></h3>
+        <h3><span class="badge">2</span> <label for="">     Your Billing Address</label></h3>
         <div class="row">
           <div class="form-group col-md-6">
             <input class="form-control" type="text" ng-model="firstName" placeholder="First Name">
@@ -35,7 +36,6 @@
             <input class="form-control" type="text" ng-model="city" placeholder="City">
           </div>
           <div class="form-group col-md-6">
-            <!--<input class="form-control" type="text" ng-model="state" placeholder="State">-->
             <select id="state-selector" class="form-control" ng-model="state">
               <option value="" selected>State</option>
               <option value="AL">Alabama</option>
@@ -107,7 +107,7 @@
           </div>
         </div>
         <div class="form-group">
-          <h3><span class="badge">3</span><label for="card-field">Payment Method</label></h3>
+          <h3><span class="badge">3</span> <label for="card-field"> Payment Method</label></h3>
           <div class="radio">
             <label>
               <input type="radio" name="optionsRadios" id="ccRadio" value="option1" checked>
@@ -123,33 +123,37 @@
           </label>
         </div>
         <div class="purchase-btn-container">
+          <br>
           <h4>Almost done! Click the submit button to process your payment.</h4>
           <div class="alert alert-danger" role="alert" ng-hide="errorMessage.length === 0">{{ errorMessage }}></div>
-          <input class="btn btn-info" type="submit" value="Submit Your Order">
+          <input id="submit-btn" class="btn btn-info" type="submit" value="Submit Your Order">
         </div>
     </form>
   </div>
+  <!--      SIDE PANEL       -->
   <div class="col-md-4 checkout-cart form-group">
-    <h1>Your Shopping Cart</h1>
-    <a href="/apparel"><input class="btn btn-default" type="submit" value="<< Cancel and continue Shopping"></a>
-    <h1>Order Summary</h1>
+    <h3>Your Shopping Cart</h3>
+    <a href="/apparel"><button id="cancel-return" class="btn btn-lg" type="submit" value="<< Cancel and continue Shopping"><< Cancel and continue Shopping</button></a>
+    <br><br>
     <div class="input-group">
       <div class="col-md-12 cart-item" ng-repeat="product in cart">
         <div class="col-md-6">
           <img class="cart-img" src="{{ product.imageURL }}" alt="">
         </div>
-        <div class="col-md-6">
-          {{ product.title }} ${{ product.price}}
-          <button class="btn btn-danger btn-xs" ng-click="removeItem(product)">Remove</button>
+        <div class="col-md-6 left-block">
+        {{ product.title }}<button id="cancel-return" class="btn btn-xs" style="margin-top: 0.25em; float: left;" ng-click="removeItem(product)">Remove</button></div>
+          <div class="product-right">${{ product.price}}</div>
         </div>
       </div>
-      <input class="form-control" type="text" ng-model="discountValue" placeholder="Discount Code"><button class="btn" ng-click="applyDiscount()">Apply</button>
-    </div>
+      <h3>Order Summary</h3>
+      <input class="form-control" type="text" ng-model="discountValue" placeholder="Discount Code"><button class="btn apply" ng-click="applyDiscount()">Apply</button>
+      <br>
     <div class="col-md-6 order-total-left">
-      <h3>Order Total:</h3>
+      <h4>Order Total:</h4>
     </div>
     <div class="col-md-6 order-total-right">
-      <h3>{{ total | currency}}</h3>
+      <h4 class="currency-b">{{ total | currency}}</h4>
     </div>
+  </div>
   </div>
 </div>

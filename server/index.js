@@ -11,6 +11,7 @@ var clientPath = path.join(__dirname, '../client');
 //add group prerender token
 // prerender.set('prerenderToken', process.env.PRERENDER_TOKEN);
 
+
 var app = express();
 app.use(prerender);
 app.use(express.static(clientPath));

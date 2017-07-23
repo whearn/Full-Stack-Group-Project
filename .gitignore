@@ -1,11 +1,7 @@
 node_modules
 .variables
-<<<<<<< HEAD
-client/views/workspace.html
-=======
 
 # Elastic Beanstalk Files
 .elasticbeanstalk/*
 !.elasticbeanstalk/*.cfg.yml
 !.elasticbeanstalk/*.global.yml
->>>>>>> f266e2e909d4389bf18d7ec6d0d3684925568a2e

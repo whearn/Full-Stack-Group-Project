@@ -8,7 +8,7 @@ router.post('/', function(req, res) {
                     <h5>From:${req.body.email}</h5>
                     <p>${req.body.message}</p>`;
 
-    mailService.sendEmail('no-reply@covalence.io', 'no-reply@customer.com', 'New Customer Question', content)
+    mailService.sendEmail('cramerrachael@gmail.com', 'no-reply@customer.com', 'New Customer Question', content)
     .then(function(success) {
         console.log(success);
         res.sendStatus(201);

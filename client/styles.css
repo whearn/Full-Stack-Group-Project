@@ -8,11 +8,12 @@
     box-sizing: border-box;
 }
 
- .nav-text:hover {
+.nav-text:hover {
     color: white;
 } 
-.nav-text:active {
-    border-bottom: rgb(67, 182, 200);
+.selected-nav {
+    color: white;
+    border-bottom: 3px solid white;
 }
 
 /* INDEX INDEX INDEX INDEX INDEX INDEX  */
@@ -57,10 +58,10 @@ li {
     margin-right: 1.5em;
 }
 
- .underline:active, .underline:visited, .underline:hover {
+ /*.underline:active, .underline:visited, .underline:hover {
     border-bottom: 3px solid white;
     color: white;
-} 
+} */
 .nav-logo-b {
     height: 30px;
     width: auto;
